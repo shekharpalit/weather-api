@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: weather
+  caches:
+    weather-cache:
+      expire-after-write: 1h
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+weather:
+  api:
+    prefix: https://api.weather.gov
+
