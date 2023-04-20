@@ -52,7 +52,7 @@ public class WeatherController {
     private String extractTemperatureForDay(ForecastResponse forecastResponse, String dayForTemperature) {
         for (Period period : forecastResponse.getProperties().getPeriods()) {
             if (period.getName().equalsIgnoreCase(dayForTemperature)) {
-                return String.format("Temperature on Wednesday Night: %.1f %s",
+                return String.format("Temperature on %s : %.1f %s", dayForTemperature,
                         period.getTemperature(), period.getTemperatureUnit());
             }
         }
